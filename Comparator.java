@@ -1,14 +1,21 @@
+public class Comparator {
 
-public class Comparator<T> {
+	public int getMax(int n, int m) {
+		double a = (double)n;
+		double b = (double)m;
+		return (int)getMax(a, b);
+	}
 
-	public T getMax(T var1, T var2) {
-
-		if (T instanceof String)
-
-		if (var1 > var2) {
-			return var1;
+	public double getMax(double d1, double d2) {
+		if (d1 > d2) {
+			return d1;
 		} else {
-			return var2;
+			return d2;
 		}
+	}
+
+	public String getMax(String number1, String number2) {
+		Double max = getMax(Double.parseDouble(number1), Double.parseDouble(number2));
+		return max.toString();
 	}
 }
